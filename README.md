@@ -7,6 +7,11 @@ This project is an AI-powered housing demand forecasting tool for Malaysia.
 - AWS Strands Agent
 
 ---
+## 🧩 Workflow Overview
+
+![Workflow](./agentcore-mcp.drawio.png)
+
+---
 
 ## 📁 Folder Structure
 
