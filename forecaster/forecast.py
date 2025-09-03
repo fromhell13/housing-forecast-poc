@@ -7,7 +7,7 @@ from urllib.parse import quote
 import traceback
 
 # Initialize FastMCP server
-mcp = FastMCP("house-forecast")
+mcp = FastMCP("house-forecast",host="0.0.0.0", stateless_http=True)
 
 DISTRICT_JSON_PATH = os.path.join(
     os.path.dirname(__file__), "utils", "district.json"
@@ -170,7 +170,7 @@ async def household_income_by_state_and_district(state: str) -> str | None:
     
     state_encoded = quote(state.lower())
 
-    url = f"{BASE_URL}id=hh_profile_state&icontains={state_encoded}@state"
+    url = f"{BASE_URL}?id=hh_profile_state&icontains={state_encoded}@state"
     data = await api_request(url)
 
     if not data:
@@ -190,4 +190,4 @@ async def household_income_by_state_and_district(state: str) -> str | None:
 
 if __name__ == "__main__":
     # Initialize and run the server
-    mcp.run(transport='stdio')
+    mcp.run(transport="streamable-http")

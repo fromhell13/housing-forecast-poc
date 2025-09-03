@@ -10,3 +10,6 @@ wheels/
 .venv
 
 backup
+.bedrock_agentcore.yaml
+Dockerfile
+.dockerignore
