@@ -12,3 +12,4 @@ wheels/
 backup
 .bedrock_agentcore.yaml
 Dockerfile
+utils/utils.py
