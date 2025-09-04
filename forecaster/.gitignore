@@ -9,7 +9,9 @@ wheels/
 # Virtual environments
 .venv
 
+# Environment
+.env
+
 backup
 .bedrock_agentcore.yaml
 Dockerfile
-utils/utils.py

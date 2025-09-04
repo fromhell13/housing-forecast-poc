@@ -294,6 +294,7 @@ dependencies = [
     { name = "httpx" },
     { name = "ipykernel" },
     { name = "mcp", extra = ["cli"] },
+    { name = "python-dotenv" },
 ]
 
 [package.metadata]
@@ -304,6 +305,7 @@ requires-dist = [
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "ipykernel", specifier = ">=6.30.1" },
     { name = "mcp", extras = ["cli"], specifier = ">=1.13.1" },
+    { name = "python-dotenv", specifier = ">=1.1.1" },
 ]
 
 [[package]]
