@@ -64,7 +64,7 @@ async def population_by_state_and_district(state: str, district: str) -> str | N
         state (str): The state to query in lowercase.
         district (str): The district to query in lowercase.
     Returns:
-        dict[str, Any] | None: Population data or None if not found.
+        str | None: Population data or None if not found.
     """
     print(f"[TOOL] Using population_by_state_and_district for state={state}, district={district}")
 
@@ -99,7 +99,7 @@ async def household_income_by_state_and_district(state: str, district: str) -> s
         state (str): The state to query in lowercase.
         district (str): The district to query in lowercase.
     Returns:
-        dict[str, Any] | None: Household income data or None if not found.
+        str | None: Household income data or None if not found.
     """
     print(f"[TOOL] Using population_by_state_and_district for state={state}, district={district}")
     
