@@ -9,13 +9,6 @@ import traceback
 # Initialize FastMCP server
 mcp = FastMCP("house-forecast",host="0.0.0.0", stateless_http=True)
 
-DISTRICT_JSON_PATH = os.path.join(
-    os.path.dirname(__file__), "utils", "district.json"
-)
-
-# Load JSON once at startup
-with open(DISTRICT_JSON_PATH, "r", encoding="utf-8") as f:
-    DISTRICT_DATA = json.load(f)
 
 BASE_URL = "https://api.data.gov.my/data-catalogue"
 
@@ -62,29 +55,6 @@ async def api_request(url: str) -> dict[str, Any] | None:
             "message": "API request failed, see logs for more details.",
             "url": url
         }
-        
-# MCP tool to fetch district by state value
-@mcp.tool("districts_by_state_local")
-async def districts_by_state_local(state: str) -> str:
-    """
-    Get district list from a static JSON file by state name.
-    Args:
-        state(str): The state to query in lowercase
-    Returns:
-        str | None: District Value
-    """
-    # Normalize case
-    state = state.strip().lower()
-
-    for st in DISTRICT_DATA.get("states", []):
-        if st["name"].lower() == state:
-            return {
-                "ok": True,
-                "state": st["name"],
-                "districts": st.get("districts", []),
-            }
-
-    return {"ok": False, "message": f"State '{state}' not found in district.json."}
 
 # MCP tool to fetch population data by state & district
 @mcp.tool("population_by_state_and_district")
