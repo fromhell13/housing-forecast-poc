@@ -119,10 +119,7 @@ if st.button("📊 Forecast Housing Demand"):
                     system_prompt=HOUSING_FORECASTER_PROMPT,
                     tools=tools
                 )
-                prompt = (
-                    f"Forecast housing demand in the state '{state}' and district '{district}' "
-                    f"based on population and household income. Suggest suitable price range for PRIMA housing development."
-                )
+                prompt = (f"User Input: State = '{state}' and District = '{district}' ")
                 response = agent(prompt)
                 st.success("✅ Forecast complete.")
                 st.markdown("### 🧠 AI Forecast Insight:")

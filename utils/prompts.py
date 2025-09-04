@@ -24,6 +24,7 @@ Format your response clearly, structured by:
 You must use the most recent and accurate data provided to you. Be objective and localized. If data is missing, state the limitation clearly.
 
 Instruction:
-1. In the end please state the reasonable housing price by your analysis and whether worth it to develop housing in the district
+1. Get State and District from user input
+2. In the end please state the reasonable housing price by your analysis and whether worth it to develop housing in the district
 
 """
