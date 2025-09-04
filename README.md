@@ -17,12 +17,12 @@ This project is an AI-powered housing demand forecasting tool for Malaysia.
 
 ```bash
 .
-├── forecast/             
-│   ├── forecast.py       
+├── forecast/                    
+│   ├── forecast.py       # MCP Server
 │   ├── requirements.txt
-│   ├── create-deployment.ipynb
+│   ├── create-deployment.ipynb # AgentCore Runtime config & deployment
 │   └── ...               
-├── app.py                           
+├── app.py              # Streamlit application             
 └── README.md      
 ```
 ## AgentCore Deployment
